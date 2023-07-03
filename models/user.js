@@ -13,7 +13,7 @@ const UserSchema = new Schema(
             required: 'Email address is required', // Required
             unique: true, // Unique value
             // Use regex to validate correct email address format
-            match: [/.+@.+\..+/, 'Please enter a valid e-mail address'],
+            match: [/.+@.+\..+/, 'Please enter a valid e-mail address'], // Match a string of any character, followed by an @ symbol, followed by any character, followed by a period, followed by any character
         },
         thoughts: [
             {
