@@ -1,4 +1,4 @@
-const { Thought, User } = require('../models');
+const { Thought, User } = require('../models'); // Import the User and Thought models
 
 const thoughtController = {
     // get all thoughts
@@ -10,7 +10,7 @@ const thoughtController = {
             })
             .select('-__v')
             .sort({ _id: -1 })
-            .then(dbThoughtData => res.json(dbThoughtData))
+            .then(dbThoughtData => res.json(dbThoughtData)) 
             .catch(err => {
                 console.log(err);
                 res.sendStatus(400);

@@ -1,10 +1,10 @@
-const {Schema , model, Types} = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
-const { time } = require('console');
+const {Schema , model, Types} = require('mongoose'); // Import the Mongoose library
+const dateFormat = require('../utils/dateFormat'); // Import the dateFormat module
+const { time } = require('console'); // Import the User model
 
-const ReactionSchema = new Schema(
-  {
-    reactionId: {
+const ReactionSchema = new Schema( // Schema constructor
+  { // Schema constructor
+    reactionId: { // Use Mongoose's ObjectId data type
       // Mongoose's ObjectId data type
       type: Schema.Types.ObjectId,
       // Default value is set to a new ObjectId
@@ -12,14 +12,14 @@ const ReactionSchema = new Schema(
     },
 
     reactionBody: {
-      type: String,
-      required: true,
-      maxlength: 280,
+      type: String, // String type
+      required: true, // Required
+      maxlength: 280, // Max length of 280 characters
     },
 
     username: {
-      type: String,
-      required: true,
+      type: String, // String type
+      required: true, // Required
     },
 
     createdAt: {
@@ -32,13 +32,13 @@ const ReactionSchema = new Schema(
   },
   {
     toJSON: {
-      getters: true,
+      getters: true, // Enable getters
     },
-    id: false,
+    id: false, // Disable virtuals
   }
 );
 
-const ThoughtSchema = new Schema(
+const ThoughtSchema = new Schema( // Schema constructor
     {
         thoughtText: {
             type: String, // String type

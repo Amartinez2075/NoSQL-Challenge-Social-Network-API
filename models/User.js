@@ -1,6 +1,6 @@
-const {Schema, model} = require('mongoose');
+const {Schema, model} = require('mongoose'); // Import the Mongoose library
 
-const UserSchema = new Schema(
+const UserSchema = new Schema( // Schema constructor
     {
         username: {
             type: String, // String type
