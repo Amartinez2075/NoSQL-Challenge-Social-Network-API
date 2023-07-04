@@ -1,8 +1,9 @@
 const express = require('express')
 const db = require('./config/connection')
 const routes = require('./routes')
-
+// Creates an instance of the Express application
 const app = express()
+// Specifies the port number to listen on
 const PORT = process.env.PORT || 3001
 
 // express middleware
@@ -15,12 +16,6 @@ const db = require('./config/connection')
 
 // Imports the routes for the API
 const routes = require('./routes')
-
-// Creates an instance of the Express application
-const app = express()
-
-// Specifies the port number to listen on
-const PORT = process.env.PORT || 3001
 
 // Middleware that allows the application to parse JSON data
 app.use(express.json())
