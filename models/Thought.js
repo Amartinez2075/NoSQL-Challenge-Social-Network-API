@@ -1,5 +1,5 @@
 const {Schema , model, Types} = require('mongoose'); // Import the Mongoose library
-const dateFormat = require('./utils/dateFormat'); // Import the dateFormat module
+const dateFormat = require('../utils/dateFormat'); // Import the dateFormat module
 const { time } = require('console'); // Import the User model
 
 const ReactionSchema = new Schema( // Schema constructor
@@ -70,3 +70,12 @@ const ThoughtSchema = new Schema( // Schema constructor
         id: false // Disable virtuals
     }
 );
+
+// Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
+ThoughtSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
+});
+
+const Thought = model("Thought", ThoughtSchema);
+
+module.exports = Thought;
