@@ -1,5 +1,5 @@
 const {Schema , model, Types} = require('mongoose'); // Import the Mongoose library
-const dateFormat = require('../utils/dateFormat'); // Import the dateFormat module
+const dateFormat = require('./utils/dateFormat'); // Import the dateFormat module
 const { time } = require('console'); // Import the User model
 
 const ReactionSchema = new Schema( // Schema constructor
