@@ -6,7 +6,7 @@ const {
     updateUser, // Update a user by ID and send it back as JSON data
     deleteUser, // Delete a user by ID and send it back as JSON data
     addFriend, // Add a friend to a user's friend list and send it back as JSON data
-    deleteFriend // Delete a friend from a user's friend list and send it back as JSON data
+    removeFriend // Delete a friend from a user's friend list and send it back as JSON data
   } = require("../../controllers/user-controller");
 
 // /api/users
@@ -20,7 +20,7 @@ router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser);
    // Delete a user by its _id and send it back as JSON data
 
 // /api/users/:userId/friends/:friendId
-router.route('/:userId/friends/:friendId').post(addFriend).delete(deleteFriend);
+router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
   // Add a new friend to a user's friend list and send it back as JSON data
   // Remove a friend from a user's friend list and send it back as JSON data
 

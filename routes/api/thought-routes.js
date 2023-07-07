@@ -6,7 +6,7 @@ const {
     updateThought, // Update a thought by its _id and send it back as JSON data
     deleteThought, // Delete a thought by its _id and send it back as JSON data
     addReaction, // Add a new reaction to a thought and send it back as JSON data
-    deleteReaction // Remove a reaction from a thought and send it back as JSON data
+    removeReaction // Remove a reaction from a thought and send it back as JSON data
 } = require('../../controllers/thought-controller'); // Import the functions from the thought-controller.js file
 
 // /api/thoughts
@@ -30,7 +30,7 @@ router
 // /api/thoughts/:thoughtId/reactions/:reactionId
 router
   .route('/:thoughtId/reactions/:reactionId') // Remove a reaction from a thought's reaction array field
-  .delete(deleteReaction); // Remove a reaction from a thought and send it back as JSON data
+  .delete(removeReaction); // Remove a reaction from a thought and send it back as JSON data
 
   module.exports = router;
 

@@ -2,7 +2,7 @@ const { Thought, User } = require('../models'); // Import the User and Thought m
 
 const thoughtController = {
     // get all thoughts
-    getAllThought(req, res) {
+    getAllThoughts(req, res) {
         Thought.find({})
             .populate({
                 path: 'reactions',
