@@ -50,7 +50,7 @@ const ThoughtSchema = new Schema( // Schema constructor
             type: Date, // Date type
             default: Date.now, // Default value is set to current timestamp
             // Uses a getter method to format the timestamp on query
-            get: (timestamp) => dateFormat(timestamp)
+       // get: (timestamp) => dateFormat(timestamp) 
         },
 
         username: {
