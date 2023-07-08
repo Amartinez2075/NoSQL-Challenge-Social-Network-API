@@ -12,8 +12,7 @@ const {
 // /api/thoughts
 router
 .route('/')
-  .get(getAllThoughts) // Get all thoughts from the database and send them back as JSON data
-  .post(createThought); // Create a new thought in the database and send it back as JSON data
+  .get(getAllThoughts); // Get all thoughts from the database and send them back as JSON data
 
 // /api/thoughts/:id
 router
@@ -21,6 +20,10 @@ router
   .get(getThoughtById) // Get a single thought by its _id and populated thought and friend data and send it back as JSON data
   .put(updateThought) // Update a thought by its _id and send it back as JSON data
   .delete(deleteThought); // Delete a thought by its _id and send it back as JSON data
+
+router
+  .route('/:userId') 
+  .post(createThought); // Create a new thought in the database and send it back as JSON data
 
 // /api/thoughts/:thoughtId/reactions
 router
