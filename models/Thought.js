@@ -1,6 +1,5 @@
 const {Schema , model, Types} = require('mongoose'); // Import the Mongoose library
 const dateFormat = require('../utils/dateFormat'); // Import the dateFormat module
-const { time } = require('console'); // Import the User model
 
 const ReactionSchema = new Schema( // Schema constructor
   { // Schema constructor
@@ -42,9 +41,9 @@ const ThoughtSchema = new Schema( // Schema constructor
     {
         thoughtText: {
             type: String, // String type
-            required: true, // Required
+            required: true,// Required
             minlength: 1, // Min length of 1 character
-            maxlength: 280 // Max length of 280 characters
+            maxlength: 280, // Max length of 280 characters
         },
 
         createdAt: {
