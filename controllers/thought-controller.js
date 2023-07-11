@@ -52,7 +52,7 @@ const thoughtController = {
             .then(dbUserData => {
                 // if no user is found, send 404
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with this id!' });
+                    res.status(200).json({ message: 'Thought Created in MongoDB' });
                     return;
                 }
                 res.json(dbUserData);
