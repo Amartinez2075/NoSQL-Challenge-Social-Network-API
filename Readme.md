@@ -25,7 +25,5 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 5. 
 
 ## Screenshot 
-
-<Insert Image here>
-
+![Alt text](<images/Insomnia worked.png>)
 ##
